@@ -10,6 +10,32 @@
   height: 40vmin;
 }
 
+.heading {
+  margin: 0;
+  text-align: center;
+  background-color: #9f8ef9;
+  padding: 0.5cm;
+}
+
+.text-input {
+  width: 15%;
+  background-color: darkslategray;
+  height: 100vh;
+}
+.text-input input {
+  width: 100%;
+  line-height: 0.8cm;
+  padding: 17px;
+  padding-left: 55px;
+  width: 300px;
+  border: 1px solid #f5f5f5;
+  font-size: 13px;
+  color: gray;
+  background-color: beige;
+  background-repeat: no-repeat;
+  background-position: left center;
+  outline: 0;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,7 +62,12 @@
 
 #map {
   height: 100vh;
+  margin:0;
+  width:75%
 }
+
+
+
 html, body {
   height: 100%;
   margin: 0;
