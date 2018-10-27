@@ -1,7 +1,7 @@
 import React, {
   Component
 } from "react";
-
+import MapSites from './MapSites'
 import axios from "axios";
 import "./App.css";
 
@@ -24,10 +24,11 @@ class App extends Component {
     const parameters = {
       client_id: "QANEM2RQ0MROGYQKMXITFC2AP5C21MY1I4JUWGXVJHIL4ZTK",
       client_secret: "WNDZEXOEG3QTHCJSS1SJPZP2BVYAQRHKW10DTYJBQEFHOW4H",
-      query: "food",
+
       near: "Sydney",
       v: "20181020"
     }
+
     axios
       .get(endPoint + new URLSearchParams(parameters))
       .then(response => {
@@ -48,7 +49,7 @@ class App extends Component {
         lat:-34.397,
         lng:150.644
               },
-      zoom: 11
+      zoom: 7
         })
         //create an infow window
         var infowindow = new window.google.maps.InfoWindow()
@@ -82,14 +83,22 @@ class App extends Component {
   render()
            {
     return (
-     <main>
-      <div id ="map">
-      <div className = "container">
-      <div className = "text-input">
+     <main className="App" role ="main">
 
-      </div>
-      </div>
-      </div>
+      <section ref="map" className="map" id="map" role="application"></section>
+
+       <section className="right-column" >
+         <header className="header" aria-label="Application Header">
+
+         </header>
+         {!this.state.searchHidden ?
+           <MapSites
+             venues={this.state.venues}
+             markers={this.state.markers}
+             searchHidden={this.state.searchHidden}
+           /> : null}
+
+       </section>
       </main >
     )
   }
