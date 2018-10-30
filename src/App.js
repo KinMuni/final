@@ -2,6 +2,7 @@ import React, {
   Component
 } from "react";
 import MapSites from './MapSites'
+import Sites from './Sites.json'
 import axios from "axios";
 import "./App.css";
 
@@ -25,7 +26,7 @@ class App extends Component {
       client_id: "QANEM2RQ0MROGYQKMXITFC2AP5C21MY1I4JUWGXVJHIL4ZTK",
       client_secret: "WNDZEXOEG3QTHCJSS1SJPZP2BVYAQRHKW10DTYJBQEFHOW4H",
 
-      near: "Sydney",
+      near: "Lexington",
       v: "20181020"
     }
 
@@ -46,10 +47,10 @@ class App extends Component {
 
     var map = new window.google.maps.Map(document.getElementById("map"), {
       center: {
-        lat:-34.397,
-        lng:150.644
+        lat:38.0656,
+        lng:84.5226
               },
-      zoom: 7
+      zoom: 13
         })
         //create an infow window
         var infowindow = new window.google.maps.InfoWindow()

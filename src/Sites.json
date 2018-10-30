@@ -1,0 +1,37 @@
+{
+    "name": "Red State BBQ",
+    "street": "4020 Georgetown Rd",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511",
+    "url": "http://www.redstatebbq.com/",
+    "pos": {"lat":38.1370,"lng":84.5333}
+  },
+{
+    "name": "Thoroughbred Restaurant",
+    "street": "1483 Leestown Rd",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511",
+    "url": "",
+    "pos": {"lat":38.0656,"lng":84.5226}
+  },
+{
+    "name": "Tachibana Japanese Restaurant",
+    "street": "785 Newtown Ct",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511",
+    "url": "https://www.tachibanarestaurant.com/",
+    "pos": {"lat":38.93240,"lng":77.1761}
+  },
+
+{
+    "name": "Taco Tico",
+    "street": "1483 Boardwalk",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511",
+    "url": "http://www.tacoticokentucky.com/",
+    "pos": {"lat":38.0711,"lng":84.4835}
+  },
