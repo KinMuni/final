@@ -2,13 +2,13 @@ import React, {
   Component
 } from "react";
 import MapSites from './MapSites'
-import Sites from './Sites.json'
 import axios from "axios";
 import "./App.css";
 
 class App extends Component {
   state = {
-    venues: []
+    venues: [],
+    filtered: null
   };
   componentDidMount() {
     this.getVenues();
@@ -25,10 +25,11 @@ class App extends Component {
     const parameters = {
       client_id: "QANEM2RQ0MROGYQKMXITFC2AP5C21MY1I4JUWGXVJHIL4ZTK",
       client_secret: "WNDZEXOEG3QTHCJSS1SJPZP2BVYAQRHKW10DTYJBQEFHOW4H",
-
       near: "Lexington",
-      v: "20181020"
+      v: "20181025"
     }
+
+
 
     axios
       .get(endPoint + new URLSearchParams(parameters))
@@ -52,6 +53,11 @@ class App extends Component {
               },
       zoom: 13
         })
+
+
+
+
+
         //create an infow window
         var infowindow = new window.google.maps.InfoWindow()
         // Display Dynamic markers
@@ -96,6 +102,8 @@ class App extends Component {
            <MapSites
              venues={this.state.venues}
              markers={this.state.markers}
+             clickListItem={this.clickListItem}
+             selectedIndex={this.state.selectedIndex}
              searchHidden={this.state.searchHidden}
            /> : null}
 

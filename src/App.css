@@ -38,7 +38,13 @@ html, body {
     font-family: 'Galada', cursive;
 }
 
-
+ input #button{
+  padding: 5px 5px 5px 25px;
+  border: 1px solid #666;
+  color:#000;
+  text-decoration:none;
+  
+ }
 
 input#input-box {
     width: 90%;
